@@ -1,0 +1,2 @@
+# wordpress-theme-custom
+WPブログのカスタマイズ
