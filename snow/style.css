@@ -1,0 +1,183 @@
+@charset "UTF-8";
+
+/*プロフィールのSNSアイコンを丸くする*/
+.author-box .sns-follow-buttons a.follow-button {
+	width: 35px !important;
+    height: 35px !important;
+    border-radius: 50%;
+    border: none;
+    background: none;
+    color: #fff;
+	line-height: 2.1;
+}
+.author-box .icon-home-logo::before {
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: '\f015';
+}
+.author-box .icon-x-corp-logo::before {
+	font-family: "Font Awesome 6 Brands";
+	content: '\e61b';
+}
+.author-box .icon-instagram-logo::before {
+    font-family: "Font Awesome 5 Brands";
+    content: '\f16d';
+	font-size: 20px;
+}
+.author-box .icon-youtube-logo::before {
+    font-family: "Font Awesome 5 Brands";
+    content: '\f167';
+}
+.author-box .icon-github-logo::before {
+	font-family: "Font Awesome 5 Brands";
+	content: '\f09b';
+}
+.author-box .icon-bluesky-logo::before {
+	font-family: "Font Awesome 6 Brands";
+	content: '\e671';
+}
+.author-box .website-button { background-color: #1e7cd1 !important; }
+.author-box .twitter-button { background-color: #000000 !important; }
+.author-box .instagram-button { background: #DF2874 !important; }
+.author-box .youtube-button { background-color: #ff0000 !important; }
+.author-box .rakuten-room-button { background-color: #c42e7f !important; }
+.author-box .github-button { background-color: #233B6C !important; }
+.author-box .bluesky-button { background-color: #0085FF !important; }
+.sns-follow.bc-brand-color.fbc-hide.sf-profile::before {
+	content: '＼ Follow me ／';
+}
+
+/*モバイルヘッダー*/
+.sidebar-menu-button.menu-button {
+	background-color: #1e7cd1;
+	padding-top: 7px;
+}
+.logo-menu-button.menu-button {
+	background-color: #1e7cd1;
+}
+.menu-button {
+	border: none !important;
+}
+.sidebar-menu-icon.menu-icon, .sidebar-menu-caption.menu-caption {
+	color: #fafafa;
+}
+/*---折り畳みアーカイブウィジェット---*/
+.widget_archive a.year{ /*各年*/
+	cursor: pointer;
+	border-bottom: 1px dotted #ccc; /*各年に下線を引く*/
+}
+.widget_archive a.year::after{ /*各年横のアイコン*/
+	font-family: "Font Awesome 5 Free";
+	content: '\f107'; /* アイコンの指定 */
+	position: relative; /* 相対配置 */
+	left: 5px; /* アイコンの位置 */
+	font-weight: bold;
+}
+.widget_archive .years ul { /*各月*/
+	display: flex;
+	flex-flow: row wrap;
+	margin-left: 5px; /*インデント*/
+	font-size: 1rem;
+	text-decoration: underline; /*各月に下線を引く*/
+}
+.widget_archive ul.years li {
+	padding: 0 1px; /*各月の間隔*/
+}
+#sidebar .widget_archive ul.years li :hover { /*マウスホバー時*/
+	background: none;
+	transition: 0.1s;
+	color: #72c7e6;
+}
+.widget_archive ul.years .hide { /*各年をクリックすると開閉*/
+	margin: 0;
+	height: 0;
+	opacity: 0;
+	visibility: hidden;
+}
+/* 会話の文字を小さく */
+div.speech-balloon {
+	font-size: 14px;
+}
+/* 目次 */
+.toc {
+	border-top: 3px solid #1e7cd1;
+	padding: 1em 3em;
+}
+/* リンクBOX */
+a.box {
+	display: inline-block;
+	background-color: #1e7cd1;
+	padding: 1em 2.5em;
+	border-radius: 0.5em;
+	color: #f5f5f5;
+	text-decoration: none;
+}
+/* フッターメニュー */
+.navi-footer-in > .menu-footer li {
+	border-left: none;
+	border-right: 2px solid var(--cocoon-thin-color);
+}
+.navi-footer-in > .menu-footer li:last-child {
+	border-right: none;
+}
+/* サイドバーウィジェットの人気/新着記事に投稿日を出す */
+.widget-entry-card-date {
+	display:block;
+	text-align: right;
+}
+.widget-entry-card-update-date{
+	display: none;
+}
+/* カテゴリーごとの最新記事 */
+div.catpost-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+div.catpost-list a.catpost-child-atag {
+	text-decoration: none;
+	display: block;
+	width: 33%;
+	color: var(--cocoon-text-color);
+	padding: 5px;
+}
+div.catpost-list a.catpost-child-atag:hover {
+	border: 1px solid var(--cocoon-xx-thin-color);
+	background-color: var(--cocoon-xx-thin-color);
+}
+div.catpost-list div.data {
+	font-size: 0.8em;
+}
+div.catpost-list img {
+	aspect-ratio: 16 / 9;
+	object-fit: cover;
+}
+
+/************************************
+** レスポンシブデザイン用のメディアクエリ
+************************************/
+/*1023px以下*/
+@media screen and (max-width: 1023px){
+  /*必要ならばここにコードを書く*/
+}
+
+/*834px以下*/
+@media screen and (max-width: 834px){
+  /*必要ならばここにコードを書く*/
+}
+
+/*480px以下*/
+@media screen and (max-width: 480px){
+  /*必要ならばここにコードを書く*/
+	div.speech-balloon {
+		font-size: 13px;
+	}
+	div.catpost-list {
+		flex-direction: column;
+		justify-content: space-around;
+	}
+	div.catpost-list a.catpost-child-atag {
+		width: auto;
+		margin-bottom: 1em;
+	}
+}
