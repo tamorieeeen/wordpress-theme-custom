@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+/*モバイルヘッダー*/
+.sidebar-menu-button.menu-button {
+	background-color: #ffa07a;
+	padding-top: 7px;
+}
+.logo-menu-button.menu-button {
+	background-color: #ffa07a;
+}
+.sidebar-menu-icon.menu-icon, .sidebar-menu-caption.menu-caption {
+	color: #fff8dc;
+}
+/*てがきノート(グリーンオレンジ)スキン対応*/
+.author-box .author-thumb img {
+	background: none;
+}
+.author-box .sns-follow-buttons {
+	background-image: none;
+}
+.icon-youtube-logo:before {
+	font-family: "Font Awesome 5 Brands";
+    content: '\f167';
+}
+
+/************************************
+** レスポンシブデザイン用のメディアクエリ
+************************************/
+/*1023px以下*/
+@media screen and (max-width: 1023px){
+  /*必要ならばここにコードを書く*/
+}
+
+/*834px以下*/
+@media screen and (max-width: 834px){
+  /*必要ならばここにコードを書く*/
+}
+
+/*480px以下*/
+@media screen and (max-width: 480px){
+  /*必要ならばここにコードを書く*/
+}
